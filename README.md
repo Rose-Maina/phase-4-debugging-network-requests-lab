@@ -65,9 +65,19 @@ developing your own process.
   - How I debugged:
 
 - Update the number of likes for a toy
+### On clicking the like button, the action would return the error:
+  NameError (uninitialized constant ToysController::Toys):
+### This means that th
+
 
   - How I debugged:
 
 - Donate a toy to Goodwill (and delete it from our database)
 
-  - How I debugged:
+### After clicking on the 'Donate to Goodwill' button, the rails server rendered the:
+  ActionController::RoutingError (No route matches [DELETE] "/toys/1")
+### This meant that no route had been provided for the DELETE method
+### therefore, a ':destroy' route was added on the resources in routes. rb.
+### This allowed the delete function on the site's toys which meant a toy has been donated to Goodwill.
+
+
