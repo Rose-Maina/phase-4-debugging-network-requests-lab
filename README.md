@@ -64,13 +64,17 @@ developing your own process.
 
   - How I debugged:
 
+### On creating a new toy, the site would render the error:
+    NameError (uninitialized constant ToysController::Toys):
+### This error occurred because Ruby could not find the class Toys in the index method.
+### This was a typo in the code which was handled by calling the Toys class appropriately in the index method
 - Update the number of likes for a toy
   - How I debugged:
 
 ### On clicking the like button, the action would return the error:
-  NameError (uninitialized constant ToysController::Toys):
-### This error arose from the fact that the engine could not find the variable toys in the update method.
-### The error was handled by adding a line of code that would render the toys variable in the creae method in json format.
+  Uncaught (in promise) SyntaxError: Unexpected token 'P', "Proxy erro"... is not valid JSON
+### This error arose from the fact that the method had not yet returned JSON  from the API.
+### The error was hence handled by adding a line of code that would render the toys variable in the creae method in json format.
 
 
 - Donate a toy to Goodwill (and delete it from our database)
