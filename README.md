@@ -65,14 +65,16 @@ developing your own process.
   - How I debugged:
 
 - Update the number of likes for a toy
-### On clicking the like button, the action would return the error:
-  NameError (uninitialized constant ToysController::Toys):
-### This means that th
-
-
   - How I debugged:
 
+### On clicking the like button, the action would return the error:
+  NameError (uninitialized constant ToysController::Toys):
+### This error arose from the fact that the engine could not find the variable toys in the update method.
+### The error was handled by adding a line of code that would render the toys variable in the creae method in json format.
+
+
 - Donate a toy to Goodwill (and delete it from our database)
+  - How I debugged:
 
 ### After clicking on the 'Donate to Goodwill' button, the rails server rendered the:
   ActionController::RoutingError (No route matches [DELETE] "/toys/1")
